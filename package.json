@@ -1,21 +1,32 @@
 {
-  "name": "vanilla-app-template",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "goit-js-hw-10",
+  "version": "2.0.0",
+  "description": "",
+  "homepage": "https://MizakaMaks.github.io/goit-js-hw-10",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
-    "preview": "vite preview"
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /goit-js-hw-10/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MizakaMaks/goit-js-hw-10.git"
+  },
+  "keywords": [],
+  "author": "Mizernyi Maksym <mizerniy.maksim@ukr.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MizakaMaks/goit-js-hw-10/issues"
+  },
+  "dependencies": {
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.6",
+    "slim-select": "^2.5.1"
   },
   "devDependencies": {
-    "vite": "^4.0.5",
-    "glob": "^8.1.0"
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
   },
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
-  "license": "ISC",
-  "dependencies": {
-    "vite-plugin-full-reload": "^1.0.5",
-    "vite-plugin-html-inject": "^1.0.1"
-  }
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
