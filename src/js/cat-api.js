@@ -1,7 +1,7 @@
 export {fetchBreeds, fetchCatBreed}
 
 const API_KEY = 'live_Ko6wZTeYmlx0ffigih2h1Z9ovtTKpVD4jIxy8RCsg0DzCnOULymC5Yb71xvzx8Tr'
-const BASE_URL = 'https://api.thecatapi.com/v1/breeds'
+const BASE_URL = 'https://api.thecatapi.com/v1'
 
 function fetchBreeds() {
     return fetch(`${BASE_URL}/breeds`, {
