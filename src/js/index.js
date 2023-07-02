@@ -7,12 +7,15 @@ const error = document.querySelector('.error');
 error.style.display = 'none';
 
 selector.addEventListener('change', reloadInfo);
-
+hideLoader()
+hideCatInfo()
 fetchBreeds()
   .then(showBreedsInfo)
   .catch(error => {
     console.log(error);
     showError();
+    hideSelector();
+    hideLoader();
   });
 
 function showBreedsInfo(breeds) {
@@ -29,6 +32,8 @@ function showBreedsInfo(breeds) {
     .catch(error => {
       console.log(error);
       showError();
+      hideSelector()
+
     });
 }
 
@@ -42,6 +47,9 @@ function addMarkupCat(cat) {
 }
 
 function reloadInfo(e) {
+  console.log(selector)
+  showSelector() 
+  showCatInfo()
   showLoader();
   catInfo.innerHTML = '';
   fetchCatBreed(e.target.value)
@@ -49,6 +57,7 @@ function reloadInfo(e) {
     .catch(error => {
       console.log(error);
       showError();
+      hideSelector();
     })
     .finally(() => {
       hideLoader();
@@ -65,4 +74,20 @@ function showLoader() {
 
 function showError() {
   error.style.display = 'block';
+}
+
+function showSelector() {
+  selector.style.display = 'block'
+}
+
+function hideSelector() {
+  selector.style.display = 'none'
+}
+
+function hideCatInfo(){
+  catInfo.style.display = 'none'
+}
+
+function showCatInfo(){
+  catInfo.style.display = 'block'
 }
