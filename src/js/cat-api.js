@@ -4,7 +4,7 @@ const API_KEY = 'live_Ko6wZTeYmlx0ffigih2h1Z9ovtTKpVD4jIxy8RCsg0DzCnOULymC5Yb71x
 const BASE_URL = 'https://api.thecatapi.com/v1'
 
 function fetchBreeds() {
-    return fetch(`${BASE_URL}/breds`, {
+    return fetch(`${BASE_URL}/breeds`, {
     headers: {
         'x-api-key': API_KEY,
     }
